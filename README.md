@@ -1,9 +1,9 @@
-Abstract
+# Abstract
 
 A web application to simplify the calculation of Course Outcomes of Continuous Internal Assessment, AAT , Assignment and Semester End Examinations. The web application when fed with the Continuous Internal Assessment marks of the students, would result in the Course Attainment of the individual Course Outcome of that subject which can be used for Department Metrics purpose. The aim of this application is to automate the whole process and require zero manual calculations or errors. It also provides the related data analytics of the uploaded data in the form of User understandable tables, statistics and charts. The result is printable as a document.
 
 
-Introduction
+## Introduction
 
 Course Outcomes are formed based on the subject knowledge and the Blooms taxonomy. There are six possible Course outcomes. To know the performance of a particular course for that semester, the course attainment must be calculated. This will showcase the performance of the students in that particular subject in that semester. The calculation required to do this is humongous as the data involved here is also huge. Each students’ marks of each question in each CIA (Continuous Internal Assessment) must be considered for the calculation purposes and the course outcome must be derived.
 
@@ -16,7 +16,7 @@ This calculation will be performed on Internals marks, Assignment marks, AAT Mar
 All of this information will be provided in tabular format and in terms of Pie Chart graphs for each CO.
 
 
-Design:
+## Design:
  
 The components of the design in this web application includes:
 1.	User Interface:  The web user interface provides a clear GUI to the user who can then easily interact with the application. He can navigate between the web pages, provide the input as the document and get the output in the form of statistics and pie charts.
@@ -28,7 +28,7 @@ The components of the design in this web application includes:
 
 
 
-Implementation:
+## Implementation:
 The web application has been implemented using a Python web framework Flask. Flask is a web framework which is used to develop web applications using Python as the backend.
 The responsibilities of Flask in this project are:
 1.	Routing: 
@@ -49,7 +49,7 @@ a.	The flask is responsible to call the computational file which is written in P
 
 
 
-Testing / Result and Analysis
+## Testing / Result and Analysis
 
 Testing: 
 	Inputs: doc.xls 
@@ -69,10 +69,10 @@ Hence the testing is successful and the program works in the requirement specifi
 
 
 
-Conclusion:
+## Conclusion:
  	This web application can be used to automate the calculation of Course outcomes with just the upload of the excel document. This will considerably increase the accuracy and speed in this domain as the data is multiple in number and huge in terms of size.
 
-Future Enhancements:
+## Future Enhancements:
 	The application can be extended to support other departments of the college.
 
 
