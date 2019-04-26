@@ -1,0 +1,58 @@
+{% extends 'layouts.html' %}
+{%block css%}
+{%endblock%}
+{% block body %}
+
+<h2>Embedded Computing System</h2>
+<table class="table">
+  <tr class="thead-light">
+    <th>Course Outcome</th>
+    <th>Course Attainment</th>
+    <th>Number of students attempted</th>
+    <th>Max marks scored</th>
+    <th>Number of students who scored max marks</th>
+    <th>Min marks scored</th>
+    <th>Number of students who scored min marks</th>
+  </tr>
+  {% for key in ans['attainment'].keys() %}
+  <tr align="center">
+    <td>{{key}}</td>
+    <td>{{ans['attainment'][key]}}</td>
+    <td>{{ans['finalTotalCount'][key]}}</td>
+    <td>{{ans['finalMaxValueDict'][key]}}</td>
+    <td>{{ans['finalNumberOfMaxDict'][key]}}</td>
+    <td>{{ans['finalMinValueDict'][key]}}</td>
+    <td>{{ans['finalNumberOfMinDict'][key]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h3>Course Attainment of SEE</h3>
+<!--Newly added table-->
+<table class="table">
+  <tr class="thead-light" align="center">
+    <th>Domain</th>
+    <th>Attainment</th>
+  </tr>
+  {%for key in extra_dict %}
+  <tr align="center">
+    <td>{{key}}</td>
+    <td>{{extra_dict[key]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+{% for key in ans['imagedictionary'].keys() %}
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-6" align="center">
+    <img src="{{url_for('static', filename=ans['imagedictionary'][key])}}"><br /><br />
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+
+{% endfor %}
+
+
+{% endblock %}

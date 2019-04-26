@@ -1,0 +1,12 @@
+{% extends 'layouts.html' %}
+{% block body %}
+<br/><br/>
+<div class="container mt-3" align="center">
+    <form action = "http://localhost:5000/co-calc" method = "POST" enctype = "multipart/form-data">
+    <div class="custom-file mb-3">
+      <input style="display:inline;background-color:lightgrey;border:1px solid black;border-radius:100px;width:300px;" type="file" class="custom-file-input" id="customFile" name="file" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input style="display:inline;" type = "submit" class="btn btn-success"/>
+    </div>
+  </form>
+</div>
+{% endblock %}

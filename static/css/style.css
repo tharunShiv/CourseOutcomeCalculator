@@ -1,0 +1,59 @@
+html, body {
+    background-color:white;
+}
+
+.navbar{
+    margin:0;
+    padding:0;
+    width:90%;
+    margin:auto;
+    border:1px solid #2b3e50;
+    
+    box-shadow: 10px 5px 5px #999;
+    color:#FFF;
+    
+}
+
+.panel-heading{
+    background-color:#2b3e50!important;
+}
+
+.panel{
+    box-shadow: 10px 5px 5px #BBB;
+}
+
+.jumbotron{
+    margin-top:5px;  
+}
+
+#jumbo{
+    border-left:3px solid #2b3e50;
+    border-spacing:8px;
+}
+
+footer{
+    text-align:center;
+    border-top:1px solid #2b3e50;
+    border-bottom:1px solid #2b3e50;
+    border-radius:10px;
+    box-shadow: 10px 5px 5px #CCC;
+    margin-top:5%;
+    margin-bottom:30px;
+    padding:5px;
+ 
+}
+
+th {
+    text-align: center;
+}
+
+.coaddtable {
+    
+    margin-bottom:5%;
+}
+
+
+
+.addstud {
+    padding:15px;
+}
