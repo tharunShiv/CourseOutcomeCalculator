@@ -15,12 +15,12 @@ def level_of_attainment(avg_greater,co_title):
             coattainment_list.append(1)
     #converting list into dictionary
     coattainment_dict={}
-    coattainment_dict['aat']=coattainment_list[0]
+    coattainment_dict['AAT']=coattainment_list[0]
     co=co_title[0]
     coattainment_dict[co]=coattainment_list[1]
     co=co_title[1]
     coattainment_dict[co]=coattainment_list[2]
-    coattainment_dict['see']=coattainment_list[3]
+    coattainment_dict['SEE']=coattainment_list[3]
     return coattainment_dict
 
 def calc(aat,a1,a2,see,co_title):

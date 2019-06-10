@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>DSCE | CALCI</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css" >  -->
-  <link rel="stylesheet" type="text/css" media="screen"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-  <style media="screen">
-    {
-      % block css %
-    }
+  <head>
+    <title>DSCE | CALCI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" >  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+    <style media="screen">
 
       {
-      % endblock %
-    }
-  </style>
-</head>
+        % block css %
+      }
 
-<body>
+        {
+        % endblock %
+      }
+    </style>
+  </head>
 
-  <div class="container">
-    {% include 'includes/navbar.html' %}<br />
-    {% block body %}
-    {% endblock %}
-  </div>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-
+  <body>
+    <div class="container">
+      {% include 'includes/navbar.html' %}<br />
+      {% block body %} {% endblock %}
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
 </html>

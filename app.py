@@ -40,11 +40,13 @@ def upload_file():
       f.save(pathf)
       answer = Cal(pathf)
       extradict_ans = Cal2(pathf)
+      li=list(answer['attainment'].keys())
+      li.sort()
 
       print(answer)
       print(extradict_ans)
       #print(extradict_ans)
-      return render_template('upload.html',ans = answer,extra_dict=extradict_ans)
+      return render_template('upload.html',ans = answer,extra_dict=extradict_ans,lis=li)
    else:
        return redirect("/", code=302)
 
