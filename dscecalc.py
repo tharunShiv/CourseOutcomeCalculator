@@ -3,6 +3,12 @@ import numpy as np
 def Cal(pathf):
     
         students = pd.read_excel(pathf, 10)
+        course_detail = pd.read_excel(pathf, 1, header=None)
+
+        c_d = course_detail
+        # print("c_d", c_d[0:])
+        # print("\n\nCD:", c_d[0:].iloc[0, 1], "\n\n")
+        course_name = c_d[0:].iloc[0, 1]
         stud = students[6:]     # getting only the student marks
 
         iat1 = stud.iloc[:, 2:8]   # marks of iat1 only
@@ -42,11 +48,11 @@ def Cal(pathf):
         for x in cols:
             if z < 6:
                 z += 1
-                print(coiat1[0][(x)] + "\n\n")
-                print(len(stud))
+                # print(coiat1[0][(x)] + "\n\n")
+                # print(len(stud))
                 for y in range(len(stud)):
                     if coiat1[0][x] in coTotalDict1 and str(iat1.iloc[y, x]) != 'nan':
-                        print(coTotalDict1[coiat1[0][x]])
+                        # print(coTotalDict1[coiat1[0][x]])
                         coTotalDict1[coiat1[0][x]] += iat1.iloc[y, x]
                         coCountDict1[coiat1[0][x]] += 1
                         coStudentMarks[coiat1[0][x]].append(iat1.iloc[y, x])
@@ -66,11 +72,11 @@ def Cal(pathf):
                             coStudentMarks[coiat1[0][x]].append(iat1.iloc[y, x])
             elif z < 13:
                 z += 1
-                print(coiat2[0][x] + "\n\n")
-                print(len(stud))
+                # print(coiat2[0][x] + "\n\n")
+                # print(len(stud))
                 for y in range(len(stud)):
                     if coiat2[0][x] in coTotalDict2 and str(iat2.iloc[y, x]) != 'nan':
-                        print(coTotalDict2[coiat2[0][x]])
+                        # print(coTotalDict2[coiat2[0][x]])
                         coTotalDict2[coiat2[0][x]] += iat2.iloc[y, x]
                         coCountDict2[coiat2[0][x]] += 1
                         coStudentMarks[coiat2[0][x]].append(iat2.iloc[y, x])
@@ -89,11 +95,11 @@ def Cal(pathf):
                         else:
                             coStudentMarks[coiat2[0][x]].append(iat2.iloc[y, x])
             else:
-                print(coiat3[0][x] + "\n\n")
-                print(len(stud))
+                # print(coiat3[0][x] + "\n\n")
+                # print(len(stud))
                 for y in range(len(stud)):
                     if coiat3[0][x] in coTotalDict3 and str(iat3.iloc[y, x]) != 'nan':
-                        print(coTotalDict3[coiat3[0][x]])
+                        # print(coTotalDict3[coiat3[0][x]])
                         coTotalDict3[coiat3[0][x]] += iat3.iloc[y, x]
                         coCountDict3[coiat3[0][x]] += 1
                         coStudentMarks[coiat3[0][x]].append(iat3.iloc[y, x])
@@ -113,12 +119,12 @@ def Cal(pathf):
                         else:
                             coStudentMarks[coiat3[0][x]].append(iat3.iloc[y, x])
 
-        print(coTotalDict1)
-        print(coCountDict1)
-        print(coTotalDict2)
-        print(coCountDict2)
-        print(coTotalDict3)
-        print(coCountDict3)
+        # print(coTotalDict1)
+        # print(coCountDict1)
+        # print(coTotalDict2)
+        # print(coCountDict2)
+        # print(coTotalDict3)
+        # print(coCountDict3)
 
         # finding the final total dictionary
         finalTotalDict = dict()
@@ -405,4 +411,5 @@ def Cal(pathf):
             imagedictionary[x] = x+".png"
             #plt.show()
         resultDict['imagedictionary'] = dict(imagedictionary)
+        resultDict['courseName'] = course_name
         return resultDict

@@ -26,7 +26,7 @@ if __name__ == '__main__':
 from flask import Flask, render_template, request,redirect
 from dscecalc import Cal
 from newCalc import Cal2
-app =Flask(__name__,static_folder = 'C:\\Users\\tharu\\Desktop\\myflaskapp\\static')
+app =Flask(__name__,static_folder = 'D:\\desktop\\aug-8-19\\myflaskapp\\static')
 
 @app.route('/')
 def upload():
