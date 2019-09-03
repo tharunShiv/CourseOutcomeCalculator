@@ -15,8 +15,6 @@ def Cal(pathf):
         iat2 = stud.iloc[:, 9:15]  # marks of iat2 only
         iat3 = stud.iloc[:, 16:22]  # marks of iat3 only
 
-
-
         coiat1 = np.reshape(students.iloc[0, 2:8].values, (1, 6))  # the cos of each question for iat 1
         coiat2 = students.iloc[0, 9:15].values.reshape(1, 6)  # the cos of each question for iat 2
         coiat3 = students.iloc[0, 16:22].values.reshape(1, 6)  # the cos of each question for iat 3
@@ -141,7 +139,7 @@ def Cal(pathf):
             else:
                 finalTotalDict[x] = coTotalDict2[x]
 
-        for x in coTotalDict2.keys():
+        for x in coTotalDict3.keys():
             if x in finalTotalDict:
                 finalTotalDict[x] += coTotalDict3[x]
             else:
@@ -162,7 +160,7 @@ def Cal(pathf):
             else:
                 finalCountDict[x] = coCountDict2[x]
 
-        for x in coCountDict2.keys():
+        for x in coCountDict3.keys():
             if x in finalCountDict:
                 finalCountDict[x] += coCountDict3[x]
             else:

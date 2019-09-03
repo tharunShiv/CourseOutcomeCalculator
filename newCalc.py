@@ -16,6 +16,7 @@ def level_of_attainment(avg_greater,co_title):
     #converting list into dictionary
     coattainment_dict={}
     coattainment_dict['AAT']=coattainment_list[0]
+    print("\n\nCO TITLE:", co_title, "\n\n")
     co=co_title[0]
     dict_key = 'Assignment: ' + co
     coattainment_dict[dict_key]=coattainment_list[1]
@@ -82,7 +83,7 @@ def Cal2(pathf):
 
     #getting all titles of co's
     # co_title=np.array(filteredDataset.iloc[0, 1:3].values).tolist()
-    co_title=np.array(filteredDataset.iloc[0, 1:2].values).tolist()
+    co_title=np.array(filteredDataset.iloc[0, 0:2].values).tolist()
 
 
 
